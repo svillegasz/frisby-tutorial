@@ -1,0 +1,26 @@
+{
+  "name": "frisby-test",
+  "version": "1.0.0",
+  "description": "[![NPM](https://nodei.co/npm/frisby.png)](https://nodei.co/npm/frisby/)\r [![Build\r Status](https://travis-ci.org/vlucas/frisby.png?branch=master)](https://travis-ci.org/vlucas/frisby)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svillegasz/frisby-tutorial.git"
+  },
+  "keywords": [
+    "frisby"
+  ],
+  "author": "Sebastián Villegas Zapata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svillegasz/frisby-tutorial/issues"
+  },
+  "homepage": "https://github.com/svillegasz/frisby-tutorial#readme",
+  "devDependencies": {
+    "frisby": "^2.0.2",
+    "jest": "^20.0.4"
+  }
+}
