@@ -4,26 +4,47 @@ const postSchema = require('./schema/post.schema');
 const commentSchema = require('./schema/comment.schema');
 
 describe('Posts', () => {
-    var response = frisby.get('http://jsonplaceholder.typicode.com/posts');
 
     it('Should return all posts', (done) => {
-            response.expect('status', 200)
-            .expect('jsonTypes', '*', postSchema)
-            .done(done);
+        frisby.get('http://jsonplaceholder.typicode.com/posts').expect('status', 401)
+        .expect('jsonTypes', '*', postSchema)
+        .done(done);
+    });
+
+    it('Should return all posts 2', (done) => {
+        frisby.get('http://jsonplaceholder.typicode.com/posts').expect('status', 500)
+        .expect('jsonTypes', '*', postSchema)
+        .done(done);
+    });
+
+    it('Should return all posts 3', (done) => {
+        frisby.get('http://jsonplaceholder.typicode.com/posts').expect('status', 200)
+        .expect('jsonTypes', '*', postSchema)
+        .done(done);
     });
 
     describe('First Post', () => {
         it('Should Have comments', (done) => {
-            response.then((res) => {
-                    let postId = res.json[0].id;
+            frisby.get('http://jsonplaceholder.typicode.com/posts').then((res) => {
+                let postId = res.json[0].id;
 
-                    return frisby.get('http://jsonplaceholder.typicode.com/posts/' + postId + '/comments')
-                        .expect('status', 200)
-                        .expect('json', '*', {
-                            postId: postId
-                        })
-                        .expect('jsonTypes', '*', commentSchema);
-                }).done(done);
+                return frisby.get('http://jsonplaceholder.typicode.com/posts/' + postId + '/comments')
+                .expect('status', 200)
+                .expect('json', '*', {
+                    postId: postId
+                })
+                .expect('jsonTypes', '*', commentSchema);
+            }).done(done);
+        });
+
+        it('Should return all posts 4', (done) => {
+            frisby.get('http://jsonplaceholder.typicode.com/posts').expect('status', 200)
+            .done(done);
+        });
+
+        it('Should return all posts 5', (done) => {
+            frisby.get('http://jsonplaceholder.typicode.com/posts').expect('status', 999)
+            .done(done);
         });
     });
 });

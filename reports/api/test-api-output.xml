@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Frisby custom expect handler" timestamp="2017-08-19T16:28:09" hostname="localhost" time="0.172" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="Frisby custom expect handler" name="Should allow custom expect handlers to be registered and used" time="0.172" />
+ </testsuite>
+ <testsuite name="Posts" timestamp="2017-08-19T16:28:09" hostname="localhost" time="1.328" errors="0" tests="3" skipped="0" disabled="0" failures="2">
+  <testcase classname="Posts" name="Should return all posts" time="0.219">
+   <failure type="exception" message="Failed: HTTP status 401 !== 200"><![CDATA[AssertionError: HTTP status 401 !== 200
+    at FrisbySpec.status (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\expects.js:25:12)
+    at FrisbySpec._addExpect (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\spec.js:413:23)
+    at then (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\spec.js:304:26)
+    at _fetch._fetch.then (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\spec.js:236:18)
+    at process._tickCallback (internal/process/next_tick.js:109:7)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Posts" name="Should return all posts 2" time="0.234">
+   <failure type="exception" message="Failed: HTTP status 500 !== 200"><![CDATA[AssertionError: HTTP status 500 !== 200
+    at FrisbySpec.status (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\expects.js:25:12)
+    at FrisbySpec._addExpect (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\spec.js:413:23)
+    at then (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\spec.js:304:26)
+    at _fetch._fetch.then (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\spec.js:236:18)
+    at process._tickCallback (internal/process/next_tick.js:109:7)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Posts" name="Should return all posts 3" time="0.313" />
+ </testsuite>
+ <testsuite name="Posts.First Post" timestamp="2017-08-19T16:28:10" hostname="localhost" time="0.547" errors="0" tests="3" skipped="0" disabled="0" failures="1">
+  <testcase classname="Posts.First Post" name="Should Have comments" time="0.281" />
+  <testcase classname="Posts.First Post" name="Should return all posts 4" time="0.125" />
+  <testcase classname="Posts.First Post" name="Should return all posts 5" time="0.141">
+   <failure type="exception" message="Failed: HTTP status 999 !== 200"><![CDATA[AssertionError: HTTP status 999 !== 200
+    at FrisbySpec.status (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\expects.js:25:12)
+    at FrisbySpec._addExpect (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\spec.js:413:23)
+    at then (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\spec.js:304:26)
+    at _fetch._fetch.then (C:\Users\G40\Documents\PSL\frisby\node_modules\frisby\src\frisby\spec.js:236:18)
+    at process._tickCallback (internal/process/next_tick.js:109:7)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+</testsuites>
