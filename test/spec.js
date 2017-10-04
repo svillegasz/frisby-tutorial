@@ -11,14 +11,8 @@ describe('Posts', () => {
         .done(done);
     });
 
-    it('Should return all posts 2', (done) => {
+    it('Should return all posts 233', (done) => {
         frisby.get('http://jsonplaceholder.typicode.com/posts').expect('status', 500)
-        .expect('jsonTypes', '*', postSchema)
-        .done(done);
-    });
-
-    it('Should return all posts 3', (done) => {
-        frisby.get('http://jsonplaceholder.typicode.com/posts').expect('status', 200)
         .expect('jsonTypes', '*', postSchema)
         .done(done);
     });
