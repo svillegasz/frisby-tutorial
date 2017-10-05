@@ -5,7 +5,7 @@ const commentSchema = require('./schema/comment.schema');
 
 describe('Posts', () => {
 
-    it('Should return all posts', (done) => {
+    it('Should return all posts 4', (done) => {
         frisby.get('http://jsonplaceholder.typicode.com/posts').expect('status', 401)
         .expect('jsonTypes', '*', postSchema)
         .done(done);
