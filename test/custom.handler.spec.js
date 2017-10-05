@@ -7,4 +7,9 @@ describe('Frisby custom expect handler', () => {
         frisby.get('http://jsonplaceholder.typicode.com/posts/1')
             .done(doneFn);
     });
+        
+    it('Should allow custom expect handlers to be registered and used 2', (doneFn) => {
+        frisby.get('http://jsonplaceholder.typicode.com/posts/1')
+            .done(doneFn);
+    });
 });
